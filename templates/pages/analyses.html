@@ -1,0 +1,78 @@
+{% extends "pages/page.html" %}
+{% load mezzanine_tags keyword_tags staticfiles static %}
+
+{% block meta_title %}GenePattern Analyses{% endblock %}
+{% block title %}GenePattern Analyses{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static "css/gpnb-extension.css" %}">
+    <style type="text/css">
+    </style>
+{% endblock %}
+
+{% block body_class %}no-cover{% endblock %}
+
+{% block extra_head %}
+    <script src="{% static "js/gp.js" %}"></script>
+    <script src="{% static "js/gp-widget.js" %}"></script>
+{% endblock %}
+
+{% block analyses %}
+
+{% block main-content %} 
+    {% block content %} {% endblock content %} 
+{% endblock main-content %}
+
+    <div class="container main-container no-negative-header">
+        <div id="analyses">
+            <div class="page-header">
+                <h1>GenePattern Analyses</h1>
+                <input type="search" placeholder="Search Analyses" class="form-control mod-search" v-model="search" />
+            </div>
+            <p>Search for an analysis tool using the box in the upper right or click on one of the featured categories below.</p>
+            <ul class="nav nav-pills tags">
+                <!-- <module-tag :tag="{'label': 'Featured'}"></module-tag> -->
+                <module-tag :tag="{'label': 'Clustering'}"></module-tag>
+                <module-tag :tag="{'label': 'Differential Expression'}"></module-tag>
+                <module-tag :tag="{'label': 'Preprocess & Utilities'}"></module-tag>
+                <module-tag :tag="{'label': 'Single-Cell'}"></module-tag>
+                <module-tag :tag="{'label': 'RNA-Seq'}"></module-tag>
+                <module-tag :tag="{'label': 'GSEA'}"></module-tag>
+            </ul>
+            <div class="categories d-none">
+                <module-category v-for="c in categories" :category="c"></module-category>
+            </div>
+            <table class="modules table table-bordered w-auto">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Documentation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr is="module-category" v-for="m in modules" :category="m">
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+
+
+{% block sidebar %} 
+{% endblock sidebar %} 
+
+{% block main-container %} 
+{% endblock main-container %} 
+{% endblock %} 
+
+{% block footer_js %}
+    <script type="module">
+        // Import the application module
+        import * as GenePattern from "/static/js/app.js";
+
+        // Initialize module search/browse
+        GenePattern.analyses("#analyses");
+    </script>
+{% endblock %}

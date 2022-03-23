@@ -1,0 +1,43 @@
+{% extends "pages/page.html" %}
+{% load mezzanine_tags keyword_tags %}
+
+{% block meta_title %}Dashboard{% endblock %}
+{% block title %}Dashboard{% endblock %}
+
+{% block extra_css %}
+    <style type="text/css">
+        .show-all {
+            line-height: 48px;
+        }
+    </style>
+{% endblock %}
+
+{% block body_class %}no-cover no-sidebar{% endblock %}
+
+{% block main %}
+    <div id="vue">
+        {% if not user.is_authenticated %}
+            <login-register title="Your Notebooks" next="reload"></login-register>
+        {% else %}
+            xxx
+        {% endif %}
+        <notebook-carousel header="Featured Notebooks" v-bind:nblist="featured_notebooks" :size="3" explore_text="All Featured Notebooks" explore_link="/library/"></notebook-carousel>
+        <notebook-carousel header="Public Notebooks" v-bind:nblist="notebooks" :size="3" explore_text="All Notebooks" explore_link="/library/#all"></notebook-carousel>
+        <notebook-carousel header="Analyses" v-bind:nblist="modules" :size="3" explore_text="All Analyses" explore_link="/analyses/"></notebook-carousel>
+        {% if not user.is_authenticated %}
+            <login-register title="Shared Notebooks" next="reload"></login-register>
+        {% else %}
+            xxx
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block footer_js %}
+    <script type="module">
+        // Import the application module
+        import * as GenePattern from "/static/js/app.js";
+
+        // Initialize the dashboard
+        GenePattern.dashboard("#vue");
+    </script>
+{% endblock %}

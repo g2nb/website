@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}> <!--<![endif]-->
+{% load pages_tags mezzanine_tags i18n staticfiles static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0 shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="keywords" content="{% block meta_keywords %}genepattern, jupyter, genepattern notebook, bioinformatics, ipython{% endblock %}">
+    <meta name="description" content="{% block meta_description %}Integrating GenePattern Genomic Analyses with the Jupyter Notebook Environment{% endblock %}">
+
+    <title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
+
+    <!-- Include RSS -->
+    {% ifinstalled mezzanine.blog %}
+		<link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
+		<link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
+	{% endifinstalled %}
+
+    <!-- Include Mezzanine Resources -->
+    <link rel="stylesheet" href="{% static "css/mezzanine.css" %}">
+    <script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
+
+    <!-- Include Bootstrap 4 -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+    <!-- Include Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <!-- Include App javascript -->
+    <script type="module" src="{% static "js/app.js" %}"></script>
+
+    <!-- Include favicon -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
+
+    <!-- Search Bar -->
+    <script async src="https://cse.google.com/cse.js?cx=014618441920599537683:ncj2utofxeo"></script>
+
+    <!-- Roboto Font-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"> 
+
+    <!-- Raleway font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&display=swap" rel="stylesheet"> 
+
+    <!-- Scroll -->
+    <script>
+    $(function () {
+        $(document).scroll(function () {
+            var $nav = $(".navbar-fixed-top");
+            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        });
+    });
+    $(function () {
+        $(document).scroll(function () {
+            var $nav = $("header");
+            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        });
+    });
+    </script>
+
+      <!-- Vendor CSS Files -->
+    <link href="/static/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="/static/vendor/aos/aos.css" rel="stylesheet">
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="/static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="/static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+
+    <!-- Include Site Stylesheet -->
+    <link rel="stylesheet" href="/static/css/style.css?today=dcds" type="text/css" media="screen"/>
+
+    <!-- Template Main CSS File -->
+    <link href="/static/css/moderna-style.css" rel="stylesheet">
+
+    {% block extra_css %}{% endblock %}
+
+    <!-- =======================================================
+    * Template Name: Moderna - v4.8.0
+    * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+
+    {% block extra_head %}{% endblock %}
+</head>
+
+<body id="{% block body_id %}body{% endblock %}" class="{% block body_class %}{% endblock %}">
+
+    <!-- Display the navigation header -->
+    {% page_menu "includes/header.html" %}
+
+    <!-- Display alerts -->
+    <!-- {% block alerts %}
+        {% nevercache %}
+            <div id="messages" class="container">
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-dismissable alert-{{ message.tags }}" data-alert="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        {% endnevercache %}
+    {% endblock %} -->
+
+    <!-- Display the leading content -->
+    {% block lead %}
+        <div class="lead-cover">
+            <div class="container" style="padding:0px;">
+                <h1 id="page-title">{% block title %}{% endblock %}</h1>
+                <h4 id="page-description">{% block description %}{% endblock %}</h4>
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block index %}
+    {% endblock index %}
+
+    {% block docs %}
+    {% endblock docs %}
+
+    <!-- Display the main content -->
+    {% block main-container %}
+    <div class="container main-container">
+        <div class="row">
+            <div id="main-pane" class="col-sm-12">
+                {% block main %}{% endblock %}
+            </div>
+            <!-- <div class="col-sm-3 wrapper">
+            {% block sidebar %}
+                {% include "includes/sidebar.html" %}
+            {% endblock %}
+            </div> -->
+        </div>
+    </div>
+    {% endblock main-container %}
+
+    {% block library %}
+    {% endblock library %}
+
+    {% block analyses %}
+    {% endblock analyses %}
+
+    <!-- Display the footer -->
+    {% page_menu "includes/footer.html" %}
+    {% include "includes/footer_scripts.html" %}
+    <script type="module" src="{% static "js/main.js" %}"></script>
+    <script type="application/javascript">
+        window.is_authenticated = {% if user.is_authenticated %}true{% else %}false{% endif %};
+    </script>
+    {% block footer_js %}
+    <!-- Vendor JS Files -->
+    <script src="/static/vendor/purecounter/purecounter.js"></script>
+    <script src="/static/vendor/aos/aos.js"></script>
+    <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="/static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="/static/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="/static/vendor/waypoints/noframework.waypoints.js"></script>
+    
+    <!-- Template Main JS File -->
+    <script src="/static/js/moderna.js"></script>
+    <script src="/static/js/main.js"></script>
+    {% endblock %}
+</body>
+</html>

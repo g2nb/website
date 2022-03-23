@@ -1,0 +1,77 @@
+{% extends "pages/page.html" %}
+{% load mezzanine_tags keyword_tags staticfiles static %}
+
+{% block meta_title %}Notebook Workspace{% endblock %}
+{% block title %}Notebook Workspace{% endblock %}
+
+{% block extra_css %}
+    <style type="text/css">
+        .main-container {
+            min-height: calc(100vh - 300px);
+            min-width: 90%;
+        }
+        #workspace {
+            width: 100%;
+        }
+
+    .expand-header {
+        margin-bottom: 20px;
+        font-size: 14pt;
+        margin-left: 12px;
+        cursor: pointer;
+    }
+    </style>
+{% endblock %}
+
+{% block extra_head %}
+    <!-- Include Tag-It -->
+    <script src="{% static "js/tag-it.js" %}"></script>
+{% endblock %}
+
+{% block body_class %}no-cover{% endblock %}
+
+{% block main %}
+{% endblock %}
+
+{% block main-content %}
+    {% block content %} {% endblock content %}
+{% endblock main-content %}
+
+{% block main-container %}
+{% endblock main-container %}
+
+{% block library %}
+    <div class="container main-container no-negative-header">
+        <div class="row">
+            <div id="workspace">
+                <div class="page-header">
+                    <h1>Notebook Workspaces</h1>
+                    <input type="search" placeholder="Search Projects" class="form-control nb-search" v-model="search" />
+                </div>
+                <p>Launch, create or share notebook projects.</p>
+                <div class="workspace">
+                    <notebook-project v-for="p in projects" :project="p"></notebook-project>
+                    <div class="card nb-card nb-card-new" @click="create_project_dialog">
+                        <div class="card-img-top" style="background: rgba(0, 0, 0, 0.05);">
+                            <i class="fa fa-plus-circle card-icon"></i>
+                        </div>
+                        <div class="card-body">
+                            <h8 class="card-title">New Project</h8>
+                            <p class="card-text">Create a New Notebook Project</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer_js %}
+    <script type="module">
+        // Import the application module
+        import * as GenePattern from "/static/js/app.js";
+
+        // Initialize notebook search/browse
+        const workspace = GenePattern.workspace("#workspace");
+    </script>
+{% endblock %}
