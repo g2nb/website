@@ -164,7 +164,7 @@ a:hover {
     opacity: 1;
 }
 .navbar-fixed-top.scrolled {
-    background-color: white;
+    background-color: #264653;
     transition: background-color 200ms linear;
 }
 .navbar-collapse.collapse.show, .navbar-collapse.collapsing {
@@ -207,7 +207,26 @@ header {
 .fixed-top.scrolled {
     padding:0px;
     transition: 0.2s;
+    background: rgba(30, 67, 86, 1) !important;
+    color: white;
 }
+
+.fixed-top.scrolled .nav-item {
+    color: white;
+}
+
+.fixed-top.scrolled .logo {
+    display: none;
+}
+
+.logo-scrolled {
+    display: none;
+}
+
+.fixed-top.scrolled .logo-scrolled {
+    display: block;
+}
+
 .navbar-toggler {
     margin-right: 20px;
     color: black;
@@ -387,7 +406,6 @@ header .nav-link {
 .about a:hover {
     opacity: 0.7;
 }
-
 
 .front-link {
     font-size: 18px;
@@ -1238,14 +1256,14 @@ div.nb-card-new {
     z-index: 2;
 }
 
-.card-icon {
+/* .card-icon {
     display: block;
     opacity: 20%;
     line-height: 100%;
     font-size: 70px;
     text-align: center;
     padding-top: 15px;
-}
+} */
 
 .modal-form input[type=text],
 .modal-form select {
@@ -1266,11 +1284,11 @@ div.nb-card-new {
     width: auto;
 }
 
-.inside .card{
+.card-icon{
     transition: transform .3s;
 }
-.inside .card:hover {
-    transform: scale(1.1);
+.card-icon:hover {
+    transform: scale(1.05);
 }
 
 #myScrollspy {

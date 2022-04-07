@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
-  background: #1e4356;
+  /* background: #1e4356; */
 }
 #header.header-transparent {
   background: none;
@@ -88,6 +88,12 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   text-decoration: none;
 }
 #header .logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 60px;
+}
+
+#header .logo-scrolled img {
   padding: 0;
   margin: 0;
   max-height: 60px;
@@ -163,7 +169,8 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   font-size: 12px;
 }
 .navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
-  color: white;
+  color: #1c3745;
+  opacity: 0.6;
 }
 .navbar .dropdown:hover > ul {
   opacity: 1;
@@ -329,8 +336,8 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 #hero h2 {
   color: black;
   margin-bottom: 30px;
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 42px;
+  font-weight: 500;
 }
 #hero p {
   width: 90%;
@@ -492,7 +499,7 @@ section {
   padding-bottom: 30px;
 }
 .section-title h2 {
-  font-size: 28px;
+  font-size: 42px;
   font-weight: 400;
   margin-bottom: 20px;
   padding-bottom: 20px;
@@ -502,21 +509,22 @@ section {
   content: "";
   position: absolute;
   display: block;
-  width: 120px;
+  width: 240px;
   height: 1px;
   background: #ddd;
   bottom: 1px;
-  left: calc(50% - 60px);
+  left: calc(50% - 120px);
 }
 .section-title h2::after {
   content: "";
   position: absolute;
   display: block;
-  width: 40px;
+  width: 80px;
   height: 3px;
-  background: #68A4C4;
+  /* background: #68A4C4; */
+  background: #ec9248;
   bottom: 0;
-  left: calc(50% - 20px);
+  left: calc(50% - 40px);
 }
 .section-title p {
   margin-bottom: 0;

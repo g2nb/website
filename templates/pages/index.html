@@ -32,7 +32,7 @@
     {% block content %} {% endblock content %} 
 {% endblock main-content %}
 
-<section id="hero" class="d-flex justify-content-center align-items-center">
+<!-- <section id="hero" class="d-flex justify-content-center align-items-center">
     <div id="carouselExampleIndicators" class="container carousel carousel-fade" data-bs-ride="carousel" data-interval="7000">
         <div class="carousel-indicators">
             <a type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="0" class="active" aria-current="true" aria-label="Slide 1"></a>
@@ -44,8 +44,8 @@
             <a type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="6" aria-label="Slide 7"></a>
         </div>
         <div class="carousel-inner">
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
+
+            <div class="carousel-item active">
             <div class="carousel-container">
                 <div class="row" style="padding:none;margin:auto">
                     <div class="col-md-5">
@@ -55,13 +55,11 @@
                     </div>
                     <div class="col-md-6">
                         <img src=/static/images/jupyterlab-example.png width="100%"/>
-                        <!-- <iframe src="https://www.youtube.com/embed/8npzyGLpUHU" height='100' width="600" frameborder="0" align="middle" style="border-radius: 30px;"></iframe> -->
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 2 -->
         <div class="carousel-item">
             <div class="carousel-container">
                 <div class="row" style="padding:none;margin:auto">
@@ -78,7 +76,6 @@
             </div>
         </div>
 
-        <!-- Slide 2 -->
         <div class="carousel-item">
             <div class="carousel-container">
                 <div class="row" style="padding:none;margin:auto">
@@ -111,8 +108,6 @@
             </div>
         </div>
 
-
-        <!-- Slide 3 -->
         <div class="carousel-item">
             <div class="carousel-container">
                 <div class="row" style="padding:none;margin:auto">
@@ -155,7 +150,6 @@
             </div>
         </div>
 
-        <!-- Slide 4 -->
         <div class="carousel-item">
             <div class="carousel-container">
                 <div class="row" style="padding:none;margin:auto">
@@ -183,51 +177,179 @@
         </a>
 
     </div>
-  </section><!-- End Hero -->
+  </section> -->
+
+  <section id="hero" class="d-flex justify-content-center align-items-center">
+    <div class="container" style="padding-top:80px; padding-bottom: 0px;">
+        <div class="row" style="padding:none;margin:auto">
+            <div class="col-md-5" style="text-align: center;">
+                <div class="section-title">
+                    <h2 class="animate__animated animate__fadeInDown" style="text-align: center; font-size: 55px;">g2nb</h2>
+                </div>
+                <p class="animate__animated animate__fadeInUp" style="text-align: center;">Genomics 2 Notebook (g2nb) combines the accessibility and research narrative capabilities of Jupyter Notebook with the genomics tools available in Galaxy, GenePattern, and other popular bioinformatics platforms, adding many features for ease of use by non-programming scientists.</p>
+                <a href="/getting-started" class="btn-get-started animate__animated animate__fadeInUp" style="text-align: left;">Get Started</a>
+            </div>
+            <div class="col-md-6">
+                <img src=/static/images/jupyterlab-example.png width="100%"/>
+                <!-- <iframe src="https://www.youtube.com/embed/8npzyGLpUHU" height='100' width="600" frameborder="0" align="middle" style="border-radius: 30px;"></iframe> -->
+            </div>
+        </div>
+    </div>
+  </section>
 
   <section class="features">
     <div class="container">
 
       <div class="section-title">
         <h2>Features</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
       </div>
 
       <div class="row">
         <div class="col-md-5">
-          <img src="/static/images/features-1.svg" class="img-fluid" alt="">
+          <img src="/static/images/jupyterlab-example.png" class="img-fluid" alt="">
         </div>
         <div class="col-md-7 pt-4">
-          <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+          <h2>Access to thousands of analysis tools</h2>
           <p class="fst-italic">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
+            g2nb seamlessly incorporates analyses available in Galaxy, GenePattern, Cytoscape, IGV, and other tools directly into a notebook, allowing a single document to contain a workflow with analyses hosted on many servers.
           </p>
-          <ul>
-            <li><i class="fa fa-check"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-            <li><i class="fa fa-check"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-          </ul>
+          <div class="row" style="padding-top:20px;">
+            <div class="card card-icon" style="width: 12rem; border:none; padding: 5px; text-align: center; margin:0 auto;">
+                <div class="text-center">
+                    <a href="/analyses/" style="color:black"><img class="card-img-top text-center" src="/static/images/icons/dna_irfansetiawan_noun.png" style="align-content:center;">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title" style="font-size: 18px;">Bioinformatics Analysis</h4>
+                    <p class="card-text" style="font-size: 80%">Hundreds of genomic analysis tools available from within a notebook, no programming required</p></a>
+                </div>
+            </div>
+            <div class="card card-icon" style="width: 12rem; border:none; padding: 5px; text-align: center; margin:0 auto;">
+                <div class="text-center">
+                    <a href="/notebook-environment/" style="color:black"><img class="card-img-top text-center" src="/static/images/icons/notebook_andrewwas_noun.png" style="align-content:center">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title" style="font-size: 18px;">Notebook Environment</h4>
+                    <p class="card-text" style="font-size: 80%">Executable notebooks based on and compatible with Jupyter Notebooks, accessible through a browser, no installation required
+                    </p></a>
+                </div>
+            </div>
+            <div class="card card-icon" style="width: 12rem; border:none; padding: 5px; text-align:center; margin:0 auto;">
+                <div class="text-center">
+                    <a href="/library/" style="color:black"><img class="card-img-top text-center" src="/static/images/icons/book_madebymade_noun.png" style="align-content:center">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title" style="font-size: 18px;">Notebook Library</h4>
+                    <p class="card-text" style="font-size: 80%">Browse a collection of genomic and machine learning notebooks and adapt them for your own use
+                    </p></a>
+                </div>
+            </div>
+        </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-5 order-1 order-md-2">
-          <img src="/static/images/features-2.svg" class="img-fluid" alt="">
+          <img src="/static/images/notebook-project.png" class="img-fluid" alt="">
         </div>
         <div class="col-md-7 pt-5 order-2 order-md-1">
-          <h3>Corporis temporibus maiores provident</h3>
+          <h2>Produce reproducible research</h2>
           <p class="fst-italic">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
+            Notebooks are contained in projects that can have their own packages and libraries, allowing all dependencies to be encapsulated in a single environment, providing portability and reproducibility.
           </p>
-          <p>
-            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum
-          </p>
+          <div class="row" style="padding-top:20px;">
+            <div class="card card-icon" style="width: 18rem; border:none; padding: 5px; text-align:center; margin:0 auto;">
+                <div class="text-center">
+                    <a href="/publish-and-sharing/" style="color:black"><img class="card-img-top text-center" src="/static/images/icons/file_laree_noun.png" style="align-content: center">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title" style="font-size: 23px;">Publish and Share
+                    </h4>
+                    <p class="card-text" style="font-size: 85%">Share a notebook with a collaborator or publish it in our library
+                    </p></a>
+                </div>
+            </div>
+            <div class="card card-icon" style="width: 18rem; border:none; padding: 5px; text-align:center; margin:0 auto;">
+                <div class="text-center">
+                    <a href="/projects/" style="color:black"><img class="card-img-top text-center" src="/static/images/icons/package_putukharismayadi_noun.png" style="align-content:center">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title" style="font-size: 23px;">Notebook Projects</h4>
+                    <p class="card-text" style="font-size: 85%">Develop notebooks within separate customizable environments
+                    </p></a>
+                </div>
+            </div>
+        </div>
         </div>
       </div>
 
+      <div class="row">
+        <div class="col-md-5">
+          <img src="/static/images/jupyterlab-example.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-md-7 pt-4">
+          <h2>Run compute-intensive analyses on high performance resources</h2>
+          <p class="fst-italic">A single notebook can run analyses hosted on a variety of cloud and high performance compute resources, allowing tools within a notebook to be run on the resources best suited to their requirements.</p>
+          <div class="row" style="padding-top:20px;">
+            <div class="card card-icon" style="width: 18rem; border:none; padding: 5px; text-align: center; margin:0 auto;">
+                <div class="text-center">
+                    <a href="/analyses/" style="color:black"><img class="card-img-top text-center" src="/static/images/icons/dna_irfansetiawan_noun.png" style="align-content:center">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title" style="font-size: 18px;">Bioinformatics Analysis</h4>
+                    <p class="card-text" style="font-size: 85%">Hundreds of genomic analysis tools available from within a notebook, no programming required</p></a>
+                </div>
+            </div>
+            <div class="card card-icon" style="width: 18rem; border:none; padding: 5px; text-align: center; margin:0 auto;">
+                <div class="text-center">
+                    <a href="/notebook-environment/" style="color:black"><img class="card-img-top text-center" src="/static/images/icons/notebook_andrewwas_noun.png" style="align-content:center">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title" style="font-size: 18px;">Notebook Environment</h4>
+                    <p class="card-text" style="font-size: 85%">Executable notebooks based on and compatible with Jupyter Notebooks, accessible through a browser, no installation required
+                    </p></a>
+                </div>
+            </div>
+        </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-5 order-1 order-md-2">
+          <img src="/static/images/jupyterlab-example.png" class="img-fluid" alt="">
+        </div>
+        <div class="col-md-7 pt-5 order-2 order-md-1">
+          <h2>Produce reproducible research</h2>
+          <p class="fst-italic">
+            Notebooks are contained in projects that can have their own packages and libraries, allowing all dependencies to be encapsulated in a single environment, providing portability and reproducibility.
+          </p>
+          <div class="row" style="padding-top:20px;">
+            <div class="card card-icon" style="width: 18rem; border:none; padding: 5px; text-align:center; margin:0 auto;">
+                <div class="text-center">
+                    <a href="/library/" style="color:black"><img class="card-img-top text-center" src="/static/images/icons/book_madebymade_noun.png" style="align-content:center">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title" style="font-size: 23px;">Notebook Library</h4>
+                    <p class="card-text" style="font-size: 85%">Browse a collection of genomic and machine learning notebooks and adapt them for your own use
+                    </p></a>
+                </div>
+            </div>
+
+            <div class="card card-icon" style="width: 18rem; border:none; padding: 5px; text-align:center; margin:0 auto;">
+                <div class="text-center">
+                    <a href="/projects/" style="color:black"><img class="card-img-top text-center" src="/static/images/icons/package_putukharismayadi_noun.png" style="align-content:center">
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title" style="font-size: 23px;">Notebook Projects</h4>
+                    <p class="card-text" style="font-size: 85%">Develop notebooks within separate customizable environments
+                    </p></a>
+                </div>
+            </div>
+        </div>
+        </div>
+      </div>
+
+
+<!-- 
       <div class="row">
         <div class="col-md-5">
           <img src="/static/images/features-3.svg" class="img-fluid" alt="">
@@ -259,104 +381,17 @@
             culpa qui officia deserunt mollit anim id est laborum
           </p>
         </div>
-      </div>
+      </div> -->
 
     </div>
-  </section><!-- End Features Section -->
-
-
-<!-- <section id="home">
-    <div class="inner">
-    <div class="lead-cover">
-        <div class="container">
-            <div class="row" style="padding-top: 100px">
-                <div class="col-md-5">
-                    <h2 id="title-center">Some New Slogan</h2>
-                    <i><h3 id="slogan-center">One line description of G2NB
-                    </h3></i>
-                    <a target="_blank" href="/get-started" class="btn btn-use">Get Started</a>
-                </div>
-                <div class="col-md-5">
-                    <iframe src="https://www.youtube.com/embed/8npzyGLpUHU" height='200' width="600" frameborder="0" align="middle" style="border-radius: 30px;"></iframe>
-                </div>
-            </div>
-            <div style="margin: auto; text-align:center; margin-bottom: 4%;margin-top: 6%;display: block">
-                <div>
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-</section> -->
-
-<!-- <section class="stats" id="stats" style="text-align: center;">
-    <div class="row">
-        <div class="col-md-4">
-            <h2>1000+</h2>
-            <h4>Users</h4>
-        </div>
-        <div class="col-md-4">
-            <h2>100,000+</h2>
-            <h4>Jobs Run</h4>
-        </div>
-        <div class="col-md-4">
-            <h2>500+</h2>
-            <h4>Citations</h4>
-        </div>
-    </div>
-</section> -->
-
-<!-- <section>
-    <div style="padding: 100px; padding-top:50px; padding-bottom:50px;" class="row" id="section1">
-        <div class="col-sm-7">
-            <h3><a target="_blank" href="https://genepattern.broadinstitute.org">                            <img src="/static/images/" width="50px;"> Galaxy</a></h3>
-            <p>The Galaxy project is an open, web-based platform for performing accessible, reproducible, and transparent biomedical research. Complete computational analyses can be built, saved, rerun, modified, and shared. Galaxy is available as a free public web server; as open-source software that can be installed and customized to address specific needs; as a virtual machine that can be installed on the cloud; and on many specialized public web servers at user sites.</p>
-        </div>
-        <div style="text-align: center;" class="col-sm-5">
-            <img src="/static/images/jupyterlab-example.png" alt="" width="100%">
-        </div>
-    </div>
-
-    <div style="padding: 100px; padding-top:50px; padding-bottom:50px;" class="row" id="section2">
-        <div style="text-align: center;" class="col-sm-5">
-            <img src="/static/images/jupyterlab-example.png" alt="" width="100%">
-        </div>
-        <div id="section2" class="col-sm-7">
-            <h3><a target="_blank" href="https://notebook.genepattern.org/"><img src="../img/software/genepattern.png" width="50px;">  GenePattern</a></h3>
-            <p>GenePattern is a powerful genomic analysis platform that provides access to hundreds of tools for gene expression analysis, proteomics, SNP analysis, flow cytometry, RNA-seq analysis, and common data processing tasks. A web-based interface provides easy access to these tools and allows the creation of multi-step analysis pipelines that enable reproducible in silico research.</p>
-        </div>
-    </div>
-
-    <div style="padding: 100px; padding-top:50px; padding-bottom:50px;" class="row" id="section1">
-        <div class="col-sm-7">
-            <h3><a target="_blank" href="https://genepattern.broadinstitute.org">                            <img src="../img/software/genepattern.png" width="50px;"> Cytoscape</a></h3>
-            <p> Cytoscape is an open-source bioinformatics software platform for visualizing molecular interaction networks and biological pathways, and integrating these networks with annotations, gene expression profiles, and other state data.   Cytoscape core distribution provides a basic set of features for data integration and visualization.  Additional features are available as plugins.  Plugins are available for network and molecular profiling analyses, new layouts, additional file format support, scripting, and connection with databases.  Plugins may be developed by anyone using the Cytoscape open API based on Java™ technology and plugin community development is encouraged. Most of the plugins are freely available.</p>
-        </div>
-        <div style="text-align: center;" class="col-sm-5">
-            <img src="/static/images/jupyterlab-example.png" alt="" width="100%">
-        </div>
-    </div>
-
-    <div style="padding: 100px; padding-top:50px; padding-bottom:50px;" class="row" id="section2">
-        <div style="text-align: center;" class="col-sm-5">
-            <img src="/static/images/jupyterlab-example.png" alt="" width="100%">
-        </div>
-        <div id="section2" class="col-sm-7">
-            <h3><a target="_blank" href="https://notebook.genepattern.org/"><img src="../img/software/genepattern.png" width="50px;">  IGV</a></h3>
-            <p> The Integrative Genomics Viewer (IGV) is a light-weight, high-performance visualization tool that enables intuitive real-time exploration of diverse, large-scale genomic data sets on standard desktop computers. It supports flexible integration of a wide variety of data types including aligned sequence reads, mutations, copy number, RNA interference screens, gene expression, methylation, and genomic annotations. IGV makes use of efficient, multi-resolution file formats to enable real-time exploration of arbitrarily large data sets over all resolution scales, while consuming minimal resources on the client computer.  Navigation through a data set is similar to that of Google Maps, allowing the user to zoom and pan seamlessly across the genome at any level of detail from whole genome to base pair.</p>
-        </div>
-    </div>
-</section> -->
-
-
+  </section>
 
 <section class="inside" style="text-align: center;" id="inside">
     <div class="row" style="text-align: center;font-family : 'Avenir' ;padding-top: 30px">
-        <!-- <div class="text-center" style="margin:auto; padding-bottom: 20px;">
-            <h3>Easily create and run a wide range of genomic analyses within shareable electronic notebooks
-            </h3>
-        </div> -->
+
+        <div class="section-title">
+            <h2>Other</h2>
+        </div>
 
         <div class="card" style="width: 20rem; border:none; padding: 20px; text-align:center; margin:0 auto;">
             <div class="text-center">
@@ -415,17 +450,6 @@
             <div class="card-body">
                 <h4 class="card-title" style="font-size: 23px;">Publications</h4>
                 <p class="card-text" style="font-size: 90%">Ensure reproducibility of your methods by adding a link to your notebook in a publication
-                </p></a>
-            </div>
-        </div>
-        <div class="card" style="width: 20rem; border:none; padding: 20px; text-align:center; margin:0 auto;">
-            <div class="text-center">
-                <a target="_blank" href="https://lab.genepattern.org" style="color:black"><img class="card-img-top text-center" src="/static/images/icons/squarelogo-blacktext-blackbody-blackmoons.png" style="align-content: center">
-            </div>
-            <div class="card-body">
-                <h4 class="card-title" style="font-size: 23px;">JupyterLab (beta)
-                </h4>
-                <p class="card-text" style="font-size: 90%">Try our beta version of G2NB on JupyterLab
                 </p></a>
             </div>
         </div>
