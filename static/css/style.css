@@ -531,7 +531,7 @@ hr {
 }
 .container {
     margin: 0 auto;
-    width: 90%;
+    width: 80%;
     border-radius: 10px;
 }
 #main-row {
@@ -569,7 +569,7 @@ hr {
 
 .lead-cover {
     padding-top: 100px;
-    width:90%;
+    width:80%;
     margin:auto;
 }
 
