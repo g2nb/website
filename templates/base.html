@@ -120,6 +120,7 @@
     {% endblock %} -->
 
     <!-- Display the leading content -->
+    <div class="back-color">
     {% block lead %}
         <div class="lead-cover">
             <div class="container" style="padding:0px;">
@@ -156,6 +157,9 @@
 
     {% block analyses %}
     {% endblock analyses %}
+    </div>
+
+
 
     <!-- Display the footer -->
     {% page_menu "includes/footer.html" %}
@@ -179,4 +183,5 @@
     <script src="/static/js/main.js"></script>
     {% endblock %}
 </body>
+
 </html>

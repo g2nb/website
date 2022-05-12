@@ -28,6 +28,11 @@ body {
     line-height: 1.5;
 }
 
+/* .back-color {
+    background-color: rgba(42,100,97, 0.2);
+    padding-bottom: 50px;
+} */
+
 /* p, span, li, b, td {
     font-weight: 300;
 } */
@@ -505,10 +510,20 @@ header .nav-link {
 }
 .main-container {    
     background: white;
-    padding: 30px;
-    border-radius: 25px;
-    margin-bottom: 20px !important;
-    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.1);
+    padding: 10px;
+    /* border-radius: 25px; */
+    /* margin-bottom: 20px !important; */
+    /* box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.1); */
+    margin-bottom: 50px;
+
+}
+
+hr {
+    background-color: grey; 
+    height:1px; 
+    /* width: 70%;  */
+    /* margin:auto;  */
+    /* margin-top: 30px; */
 }
 
 #main-pane {
@@ -554,6 +569,8 @@ header .nav-link {
 
 .lead-cover {
     padding-top: 100px;
+    width:90%;
+    margin:auto;
 }
 
 .lead-cover .col-md-6 {
@@ -657,7 +674,7 @@ i.fa.fa-angle-left, i.fa.fa-angle-right {
 }
 
 #page-title {
-    text-align: center;
+    text-align: left;
     padding-top: 50px;
     font-weight: 500;
     font-size: 50px;
@@ -675,6 +692,7 @@ i.fa.fa-angle-left, i.fa.fa-angle-right {
     color: white;
     text-shadow: 3px 3px 10px black;
 }
+
 .index-logo {
     height: 1.8em;
     color:white;
