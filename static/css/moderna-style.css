@@ -130,7 +130,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   padding: 10px 0 10px 30px;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
-  color: rgba(0, 0, 0, 0.4);
+  /* color: rgba(0, 0, 0, 0.4); */
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -142,6 +142,7 @@ h1, h2, h3, h4, h5, h6, .font-primary {
 .navbar a:hover, .navbar .active:focus, .navbar li:hover > a {
   color: rgba(0, 0, 0, 0.2);
 }
+
 .navbar .dropdown ul {
   display: block;
   position: absolute;
@@ -188,6 +189,46 @@ h1, h2, h3, h4, h5, h6, .font-primary {
   left: 100%;
   visibility: visible;
 }
+.navbar .dropdown .row {
+  min-width: 400px;
+}
+
+.navbar .dropdown .row .col-sm-6 ul {
+  display: block;
+  position: absolute;
+  top: calc(100% + 30px);
+  left: -250px;
+  margin: 0;
+  padding: 10px 0;
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  box-shadow: none;
+  height:350px;
+  transition: 0.3s;
+}
+.navbar .dropdown .row a:hover, .navbar .dropdown .row .active:hover, .navbar .dropdown .row li:hover > a {
+  color: #1c3745;
+  opacity: 0.6;
+}
+.navbar .dropdown:hover > .row .col-sm-6 ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+.navbar .dropdown .dropdown .row .col-sm-6 ul {
+  top: 0;
+  left: calc(200% - 30px);
+  visibility: hidden;
+}
+.navbar .dropdown .dropdown:hover > .row .col-sm-6 ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+  visibility: visible;
+}
+
 @media (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
     left: -90%;
