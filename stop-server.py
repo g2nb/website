@@ -8,7 +8,7 @@ import subprocess
 ##########################################
 
 # Handle the parameters
-parser = argparse.ArgumentParser(description='Stop the Docker container for the Notebook Library')
+parser = argparse.ArgumentParser(description='Stop the Docker container for the g2nb website')
 
 args = parser.parse_args()
 
@@ -17,6 +17,6 @@ args = parser.parse_args()
 ##########################################
 
 try:
-    subprocess.Popen(f'docker stop website'.split())
+    subprocess.Popen(f'docker stop g2nb'.split())
 except KeyboardInterrupt:
-    print('Shutting down Notebook Library')
+    print('Shutting down g2nb website')

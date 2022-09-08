@@ -8,9 +8,9 @@ import subprocess
 ##########################################
 
 # Handle the --data and --port options
-parser = argparse.ArgumentParser(description='Start the Docker container for the Notebook Library')
-parser.add_argument('-c', '--config', type=str, default='/config', help='Set the config directory to be mounted in the container')
-parser.add_argument('-p', '--port', type=int, default=8000, help='Set the port the repository will be available at')
+parser = argparse.ArgumentParser(description='Start the Docker container for the g2nb website')
+parser.add_argument('-c', '--config', type=str, default='/g2nb', help='Set the config directory to be mounted in the container')
+parser.add_argument('-p', '--port', type=int, default=9000, help='Set the port the repository will be available at')
 
 # Parse the arguments
 args = parser.parse_args()
@@ -21,9 +21,9 @@ args = parser.parse_args()
 
 try:
     subprocess.Popen(f'docker run --rm \
-                                  --name=website \
+                                  --name=g2nb \
                                   -p {args.port}:8000 \
                                   -v {args.config}:/config \
                                   genepattern/notebook-library:19.08'.split())
 except KeyboardInterrupt:
-    print('Shutting down Notebook Library')
+    print('Shutting down g2nb website')
