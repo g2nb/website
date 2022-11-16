@@ -9,7 +9,8 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: 'Raleway', sans-serif;
+  /* font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto', sans-serif; */
   color: black;
 }
 
@@ -25,6 +26,7 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6, .font-primary {
   font-family: "Roboto", sans-serif;
+  padding-bottom: 10px;
 }
 
 /*--------------------------------------------------------------
@@ -2046,4 +2048,36 @@ section {
 }
 #footer .credits a {
   color: #a2cce3;
+}
+
+
+.table-of-contents {
+  float: right;
+  width: 40%;
+  background: #eee;
+  font-size: 0.8em;
+  padding: 1em 2em;
+  margin: 0 0 0.5em 0.5em;
+}
+.table-of-contents ul {
+  padding: 0;
+}
+.table-of-contents li {
+  margin: 0 0 0.25em 0;
+}
+.table-of-contents a {
+  text-decoration: none;
+}
+.table-of-contents a:hover,
+.table-of-contents a:active {
+  text-decoration: underline;
+}
+
+h4:target {
+  animation: highlight 1s ease;
+}
+
+@keyframes highlight {
+  from { background: yellow; }
+  to { background: white; }
 }
