@@ -12,7 +12,7 @@
     <meta name="keywords" content="{% block meta_keywords %}genepattern, jupyter, genepattern notebook, bioinformatics, ipython{% endblock %}">
     <meta name="description" content="{% block meta_description %}Integrating GenePattern Genomic Analyses with the Jupyter Notebook Environment{% endblock %}">
 
-    <title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
+    <title>{% block meta_title %}{% endblock %} | g2nb</title>
 
     <!-- Include RSS -->
     {% ifinstalled mezzanine.blog %}
@@ -32,7 +32,7 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 
     <!-- Include Vue.js -->
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
 
     <!-- Include App javascript -->
     <script type="module" src="{% static "js/app.js" %}"></script>
@@ -87,14 +87,6 @@
     <link href="/static/css/moderna-style.css" rel="stylesheet">
 
     {% block extra_css %}{% endblock %}
-
-    <!-- =======================================================
-    * Template Name: Moderna - v4.8.0
-    * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
-    * Author: BootstrapMade.com
-    * License: https://bootstrapmade.com/license/
-    ======================================================== -->
-
     {% block extra_head %}{% endblock %}
 </head>
 
@@ -124,7 +116,7 @@
     {% block lead %}
         <div class="lead-cover">
             <h1 id="page-title">{% block title %}{% endblock %}</h1>
-            <h4 id="page-description">{% block description %}{% endblock %}</h4>
+            <!-- <h4 id="page-description">{% block description %}{% endblock %}</h4> -->
         </div>
     {% endblock %}
 

@@ -1,6 +1,9 @@
 // Declare server constants
-export const PUBLIC_NOTEBOOK_SEVER = 'https://g2nb.org/';
+export const PUBLIC_NOTEBOOK_SEVER = 'https://workspace.g2nb.org/';
 export const GENEPATTERN_SERVER = 'https://cloud.genepattern.org/gp/';
+export const GALAXY_SERVER = 'https://usegalaxy.org/';
+
+// galaxy tools list: /api/tools
 
 // Declare data cache
 let _public_notebooks = null;

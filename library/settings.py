@@ -41,7 +41,7 @@ MEDIA_ROOT = os.path.join(PROJECT_ROOT, *MEDIA_URL.strip("/").split("/"))
 SECRET_KEY = 'TODOCHANGEMEINPRODUCTION-TODOCHANGEMEINPRODUCTION'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # Site settings
 ALLOWED_HOSTS = ['*']
